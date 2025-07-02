@@ -1,3 +1,24 @@
-<div class="accueil-container">
-  <h1>Hello Paul</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <label>Paste XML here :</label>
+    </div>
+    <div class="col" >
+      <textarea style="height: 300px; width: 100%"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button type="button" (click)="click()" >Convert</button>
+    </div>
+    <div class="col">
+      <label >Result :</label>
+    </div>
+    <div class="col">
+      <label  style="height: 300px; width: 100%">{{target}}</label>
+    </div>
+  </div>
 </div>
+
+
+  
