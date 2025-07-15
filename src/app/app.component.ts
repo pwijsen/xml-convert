@@ -7,7 +7,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet,RouterModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  
 })
 export class AppComponent {
   title = 'new-projet';
