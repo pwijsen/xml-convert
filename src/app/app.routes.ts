@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 
-import { AccueilComponent } from './pages/accueil/accueil.component';
+import { ConvertComponent } from './pages/convert/convert.component';
 
 
 
 export const routes: Routes = [
-  { path: '', component: AccueilComponent },
+  { path: '', component: ConvertComponent },
  
 ];
