@@ -1,17 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <label>Paste XML here :</label>
+      <label>Input XML :</label>
     </div>
-    <div class="col" >
-      <textarea style="height: 300px; width: 100%" [(ngModel)]='xmlData'>{{xmlData}}</textarea>
+    <div class="col">
+      <textarea 
+        [(ngModel)]='xmlData' (ngModelChange)="convert()"
+        style="field-sizing: content;width: 100%">
+      </textarea>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <button type="button" (click)="convert()" >Read</button>
-      <button type="button" (click)="save()" >Save</button>
-      <button type="button" (click)="test()" >Test</button>
+
+      <button type="button" (click)="save()">Save</button>
+      <button type="button" (click)="test()">Test</button>
 
     </div>
     <div class="col">
@@ -22,16 +25,16 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">Attr</th>
-            <th scope="col">Value</th>
+            <th scope="col"></th>
+            <th style="text-align:left;padding-left: 20px" scope="col">Attr</th>
+            <th style="text-align:left;padding-left: 20px" scope="col">Value</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
+          <tr *ngFor="let att of attributes;let i=index">
+            <td scope="row">{{i+1}}</td>
+            <td style="text-align:left;padding-left: 20px">{{att.name}}</td>
+            <td style="text-align:left;padding-left: 20px">{{att.value}}</td>
           </tr>
         </tbody>
       </table>
